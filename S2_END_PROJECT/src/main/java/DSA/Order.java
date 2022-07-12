@@ -410,6 +410,7 @@ public void deleteNode(int position)
 		JButton btnNewButton = new JButton("Show Cart");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				textField_12.setText(Display());	
 			}
 		});
