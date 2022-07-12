@@ -91,13 +91,13 @@ public class Login extends JFrame {
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Username");
-		lblNewLabel.setForeground(java.awt.Color.BLACK);
+		lblNewLabel.setForeground(java.awt.Color.WHITE);
 		lblNewLabel.setFont(new Font("Serif", Font.BOLD, 24));
 		lblNewLabel.setBounds(80, 71, 125, 24);
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Password");
-		lblNewLabel_1.setForeground(java.awt.Color.BLACK);
+		lblNewLabel_1.setForeground(java.awt.Color.WHITE);
 		lblNewLabel_1.setFont(new Font("Serif", Font.BOLD, 24));
 		lblNewLabel_1.setBounds(80, 146, 112, 18);
 		panel.add(lblNewLabel_1);

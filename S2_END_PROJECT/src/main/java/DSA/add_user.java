@@ -148,6 +148,7 @@ public class add_user extends JFrame implements ActionListener{
         panel.add(b4);
         
         JLabel lblNewLabel_1 = new JLabel("Username");
+        lblNewLabel_1.setForeground(Color.WHITE);
         lblNewLabel_1.setFont(new Font("Serif", Font.BOLD, 20));
         lblNewLabel_1.setBounds(130, 63, 100, 32);
         panel.add(lblNewLabel_1);
@@ -159,6 +160,7 @@ public class add_user extends JFrame implements ActionListener{
         textField.setColumns(10);
         
         JLabel lblNewLabel_2 = new JLabel("Password");
+        lblNewLabel_2.setForeground(Color.WHITE);
         lblNewLabel_2.setFont(new Font("Serif", Font.BOLD, 20));
         lblNewLabel_2.setBounds(131, 122, 101, 22);
         panel.add(lblNewLabel_2);
@@ -170,6 +172,7 @@ public class add_user extends JFrame implements ActionListener{
         textField_1.setColumns(10);
         
         JLabel lblNewLabel_3 = new JLabel("email");
+        lblNewLabel_3.setForeground(Color.WHITE);
         lblNewLabel_3.setFont(new Font("Serif", Font.BOLD, 20));
         lblNewLabel_3.setBounds(130, 167, 77, 26);
         panel.add(lblNewLabel_3);
@@ -181,6 +184,7 @@ public class add_user extends JFrame implements ActionListener{
         textField_2.setColumns(10);
         
         JLabel lblNewLabel_4 = new JLabel("Phone No.");
+        lblNewLabel_4.setForeground(Color.WHITE);
         lblNewLabel_4.setFont(new Font("Serif", Font.BOLD, 20));
         lblNewLabel_4.setBounds(130, 226, 100, 26);
         panel.add(lblNewLabel_4);
@@ -192,7 +196,7 @@ public class add_user extends JFrame implements ActionListener{
         textField_3.setColumns(10);
         
         JLabel lblNewLabel = new JLabel("");
-        lblNewLabel.setIcon(new ImageIcon("./add user.png"));
+        lblNewLabel.setIcon(new ImageIcon("./add user.jpg"));
         lblNewLabel.setBounds(0, 0, 1924, 1031);
         getContentPane().add(lblNewLabel);
                 

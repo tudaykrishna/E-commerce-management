@@ -420,19 +420,11 @@ public void deleteNode(int position)
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				delivery_address a = new delivery_address();
+				dispose();
 				a.show();
-				File file = new File("cart.txt"); 
-				PrintWriter writer = null;
-				try {
-					writer = new PrintWriter(file);
-				} catch (FileNotFoundException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				writer.print("");
-				writer.close();			
-			}
-		});
+//				a.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+				
+		}});
 		btnNewButton_1.setBounds(1566, 298, 130, 23);
 		contentPane.add(btnNewButton_1);
 		
@@ -666,6 +658,11 @@ public void deleteNode(int position)
 		});
 		btnSearch.setBounds(1455, 344, 101, 23);
 		contentPane.add(btnSearch);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("./Order.jpg"));
+		label.setBounds(0, 0, 1924, 1041);
+		contentPane.add(label);
 		
 		
 	}

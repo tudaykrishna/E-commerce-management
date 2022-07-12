@@ -92,14 +92,14 @@ public class payment extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
+				Stack s = new Stack();
 				for(int j=1;j<=noOfRows1;j++) {
 					Cell uday = hs.getRow(j).getCell(0);
         			Cell krishna = hs.getRow(j).getCell(1);
-        			su = uday.toString();
+        			String su = uday.toString();
         			String se = krishna.toString();
-        			bye = Integer.valueOf(se);
-				}
+        			
+				
 				
         		for(int i=1;i<=noOfRows;i++) {
         			Cell ud = sh.getRow(i).getCell(0);
@@ -108,35 +108,35 @@ public class payment extends JFrame {
         			String ey = kri.toString();
         			
         			int hi = Integer.valueOf(ey);
+        			int bye = Integer.valueOf(se);
         			
-        			int jack = hi*bye;
-        		    total = total+jack;
-        			System.out.println(bye);
+        		    
+        			
         		
         			
         			if(su.equals(ye)) {
-        				System.out.println("-----------------------------------------------------------------------");
-        				System.out.println(total);
-        				String eww = String.valueOf(total);
-//        				String eww = total.toString();
-        				       				
-//                 		JLabel lblNewLabel_2 = new JLabel(eww);
-//                		lblNewLabel_2.setBounds(188, 99, 155, 27);
-//                		contentPane.add(lblNewLabel_2);
-//                		
-//                		setState(payment.ICONIFIED);
-//    					setState(payment.NORMAL);
-
-                    
-        				
-                   }
-        			
-        			}
-        		
+        				int jack = hi*bye;   
+        				s.push(jack);       		                            				
+                   }        			
+        			}        		        		
         		}
+				while(!s.isEmpty()) {
+					String w = (String) s.pop().toString();
+					total = total+ Integer.valueOf(w);
+				}
+				
+				   System.out.println(total);
+				 
+        		String eww = String.valueOf(total);
+         		JLabel lblNewLabel_2 = new JLabel(eww);
+        		lblNewLabel_2.setBounds(188, 99, 155, 27);
+        		contentPane.add(lblNewLabel_2);
+        		
+        		setState(payment.ICONIFIED);
+				setState(payment.NORMAL);
 
 			
-		});
+		}});
 		btnNewButton.setBounds(724, 296, 89, 23);
 		contentPane.add(btnNewButton);
 		

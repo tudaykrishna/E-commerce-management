@@ -16,6 +16,9 @@ import javax.swing.JOptionPane;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
+import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public class delivery_address extends JFrame {
 	
@@ -70,6 +73,7 @@ public class delivery_address extends JFrame {
 		textField.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Set Size");
+		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 try{
@@ -93,10 +97,10 @@ public class delivery_address extends JFrame {
 		     }
 			
 		});
-		btnNewButton.setBounds(671, 130, 89, 23);
+		btnNewButton.setBounds(873, 132, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Enqueue");
+		JButton btnNewButton_1 = new JButton("Enter your Address");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				   a.equeue(textField.getText());
@@ -108,10 +112,10 @@ public class delivery_address extends JFrame {
 
 
 		});
-		btnNewButton_1.setBounds(671, 240, 89, 23);
+		btnNewButton_1.setBounds(816, 242, 146, 23);
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("Dequeue");
+		JButton btnNewButton_2 = new JButton("Remove your Address");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 		         a.dequeue();
@@ -120,7 +124,7 @@ public class delivery_address extends JFrame {
 			
 		});
 		
-		btnNewButton_2.setBounds(671, 289, 89, 23);
+		btnNewButton_2.setBounds(816, 291, 146, 23);
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("Payment");
@@ -132,13 +136,19 @@ public class delivery_address extends JFrame {
 		btnNewButton_3.setBounds(873, 531, 89, 23);
 		contentPane.add(btnNewButton_3);
 		
-		JLabel lblNewLabel = new JLabel("delivery address");
-		lblNewLabel.setBounds(290, 37, 128, 28);
+		JLabel lblNewLabel = new JLabel("Delivery Address");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblNewLabel.setBounds(389, 39, 128, 28);
 		contentPane.add(lblNewLabel);
 		
 		table = new JTable();
 		table.setToolTipText("");
 		table.setBounds(135, 216, 463, 266);
 		contentPane.add(table);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("./delivery address.png"));
+		lblNewLabel_1.setBounds(0, 0, 1056, 654);
+		contentPane.add(lblNewLabel_1);
 	}
 }
