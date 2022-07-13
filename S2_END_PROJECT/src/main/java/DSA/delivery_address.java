@@ -156,9 +156,6 @@ public class delivery_address extends JFrame {
 					} catch (EncryptedDocumentException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
-					} catch (IOException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
 					}
 				}
 			}

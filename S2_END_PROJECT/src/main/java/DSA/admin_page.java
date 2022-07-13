@@ -113,7 +113,15 @@ public class admin_page extends JFrame {
 		JButton btnNewButton_3_3 = new JButton("Manage Employers");
 		btnNewButton_3_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				try {
+					Manage_Employers.main(null);
+				} catch (EncryptedDocumentException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}			
 			}
 		});
 		btnNewButton_3_3.setForeground(Color.BLACK);

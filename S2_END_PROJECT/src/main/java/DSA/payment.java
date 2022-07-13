@@ -42,15 +42,11 @@ public class payment extends JFrame {
 	private JPanel contentPane;
 	static int bye;
 	static String su;
-	
 
 	/**
 	 * Launch the application.
-	 * @throws IOException 
-	 * @throws EncryptedDocumentException 
 	 */
-	public static void main(String[] args) throws EncryptedDocumentException, IOException {	
-		
+	public static void main(String[] args) {	
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -127,7 +123,10 @@ public class payment extends JFrame {
         			
         			if(su.equals(ye)) {
         				int jack = hi*bye;   
-        				s.push(jack);       		                            				
+        				s.push(jack);   
+        				
+        				
+        				
                    }        			
         			}        		        		
         		}
@@ -150,19 +149,19 @@ public class payment extends JFrame {
 		btnNewButton.setBounds(44, 61, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Pay Later");
+		JButton btnNewButton_1 = new JButton("Caash on delivery");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-					Login a = null;
-					try {
-						a = new Login();
-					} catch (EncryptedDocumentException e2) {
-						// TODO Auto-generated catch block
-						e2.printStackTrace();
-					} catch (IOException e2) {
-						// TODO Auto-generated catch block
-						e2.printStackTrace();
-					}
+				Login a = null;
+				try {
+					a = new Login();
+				} catch (EncryptedDocumentException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				} catch (IOException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
 
     			row = hs1.createRow(noOfRows2+1);
     			cell = row.createCell(0);
@@ -192,7 +191,7 @@ public class payment extends JFrame {
     			}				
 			}
 		});
-		btnNewButton_1.setBounds(232, 61, 89, 23);
+		btnNewButton_1.setBounds(202, 61, 136, 23);
 		contentPane.add(btnNewButton_1);
 		
 		
