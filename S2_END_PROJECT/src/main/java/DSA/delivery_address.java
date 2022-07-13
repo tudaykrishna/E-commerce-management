@@ -146,11 +146,7 @@ public class delivery_address extends JFrame {
 		JButton btnNewButton_3 = new JButton("Payment");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(textField.getText().isEmpty()||textField_1.getText().isEmpty()||textField_2.getText().isEmpty()) {
-
-					   JOptionPane.showMessageDialog(null,"          PLEASE FILL ALL THE FIELDS        ","ERROR", JOptionPane.ERROR_MESSAGE);
-				}
-				else {
+				
 					try {
 						payment.main(null);
 					} catch (EncryptedDocumentException e1) {
@@ -158,7 +154,7 @@ public class delivery_address extends JFrame {
 						e1.printStackTrace();
 					}
 				}
-			}
+			
 		});
 		btnNewButton_3.setBounds(873, 531, 89, 23);
 		contentPane.add(btnNewButton_3);

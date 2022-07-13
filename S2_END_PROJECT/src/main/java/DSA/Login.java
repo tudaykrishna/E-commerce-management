@@ -147,7 +147,7 @@ public class Login extends JFrame {
         			Cell krishna = sh.getRow(i).getCell(1);
         			String ye = uday.toString();
         			String ey = krishna.toString();
-        			if(s1.equals("admin")&& s2.equals("admin")) {
+        		if(s1.equals("admin")&& s2.equals("admin")) {
 	                	
                     	 admin_page.main(null); 
                     	 dispose();

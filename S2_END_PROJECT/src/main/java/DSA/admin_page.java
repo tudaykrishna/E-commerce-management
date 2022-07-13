@@ -44,7 +44,7 @@ public class admin_page extends JFrame {
 	 */
 	public admin_page() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 781, 496);
+		setBounds(100, 100, 781, 350);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -120,13 +120,7 @@ public class admin_page extends JFrame {
 		});
 		btnNewButton_3_3.setForeground(Color.BLACK);
 		btnNewButton_3_3.setFont(new Font("Times New Roman", Font.BOLD, 17));
-		btnNewButton_3_3.setBounds(31, 299, 207, 52);
+		btnNewButton_3_3.setBounds(272, 147, 207, 52);
 		contentPane.add(btnNewButton_3_3);
-		
-		JButton btnNewButton_3_2_1_1 = new JButton("Pay Later");
-		btnNewButton_3_2_1_1.setForeground(Color.BLACK);
-		btnNewButton_3_2_1_1.setFont(new Font("Times New Roman", Font.BOLD, 17));
-		btnNewButton_3_2_1_1.setBounds(508, 299, 207, 52);
-		contentPane.add(btnNewButton_3_2_1_1);
 	}
 }

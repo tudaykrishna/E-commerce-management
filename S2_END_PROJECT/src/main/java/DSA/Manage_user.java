@@ -165,5 +165,15 @@ public class Manage_user extends JFrame {
 		btnRemoveUser.setFont(new Font("Serif", Font.BOLD, 17));
 		btnRemoveUser.setBounds(63, 230, 180, 29);
 		contentPane.add(btnRemoveUser);
+		
+		JButton btnNewButton_1 = new JButton("< back");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				admin_page.main(null);
+				dispose();
+			}
+		});
+		btnNewButton_1.setBounds(10, 11, 89, 23);
+		contentPane.add(btnNewButton_1);
 	}
 }

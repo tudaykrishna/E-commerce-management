@@ -146,22 +146,15 @@ public class payment extends JFrame {
 
 			
 		}});
+		final Login a = new Login();
+		
 		btnNewButton.setBounds(44, 61, 136, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Caash On Delivery");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Login a = null;
-				try {
-					a = new Login();
-				} catch (EncryptedDocumentException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
-				} catch (IOException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
-				}
+				
 
     			row = hs1.createRow(noOfRows2+1);
     			cell = row.createCell(0);
@@ -188,7 +181,8 @@ public class payment extends JFrame {
     				fos.close();
     			} catch (IOException e1) {
     				e1.printStackTrace();
-    			}				
+    			}	
+    			System.out.println("uu");
 			}
 		});
 		btnNewButton_1.setBounds(202, 61, 163, 23);
