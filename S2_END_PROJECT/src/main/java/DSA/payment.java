@@ -86,7 +86,7 @@ public class payment extends JFrame {
 		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 391, 281);
+		setBounds(100, 100, 445, 293);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -191,7 +191,7 @@ public class payment extends JFrame {
     			}				
 			}
 		});
-		btnNewButton_1.setBounds(202, 61, 136, 23);
+		btnNewButton_1.setBounds(202, 61, 163, 23);
 		contentPane.add(btnNewButton_1);
 		
 		
