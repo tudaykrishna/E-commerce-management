@@ -95,7 +95,7 @@ public class payment extends JFrame {
 
 		 
 		
-		JButton btnNewButton = new JButton("Pay");
+		JButton btnNewButton = new JButton("Display Bill");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -149,7 +149,7 @@ public class payment extends JFrame {
 		btnNewButton.setBounds(44, 61, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton_1 = new JButton("Caash on delivery");
+		JButton btnNewButton_1 = new JButton("Caash On Delivery");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Login a = null;
