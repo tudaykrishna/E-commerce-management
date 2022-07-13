@@ -104,12 +104,6 @@ public class admin_page extends JFrame {
 		btnNewButton_3_2.setBounds(508, 147, 207, 52);
 		contentPane.add(btnNewButton_3_2);
 		
-		JButton btnNewButton_3_2_1 = new JButton("Staff Attendance");
-		btnNewButton_3_2_1.setForeground(Color.BLACK);
-		btnNewButton_3_2_1.setFont(new Font("Times New Roman", Font.BOLD, 17));
-		btnNewButton_3_2_1.setBounds(508, 299, 207, 52);
-		contentPane.add(btnNewButton_3_2_1);
-		
 		JButton btnNewButton_3_3 = new JButton("Manage Employers");
 		btnNewButton_3_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -132,7 +126,7 @@ public class admin_page extends JFrame {
 		JButton btnNewButton_3_2_1_1 = new JButton("Pay Later");
 		btnNewButton_3_2_1_1.setForeground(Color.BLACK);
 		btnNewButton_3_2_1_1.setFont(new Font("Times New Roman", Font.BOLD, 17));
-		btnNewButton_3_2_1_1.setBounds(270, 147, 207, 52);
+		btnNewButton_3_2_1_1.setBounds(508, 299, 207, 52);
 		contentPane.add(btnNewButton_3_2_1_1);
 	}
 }
