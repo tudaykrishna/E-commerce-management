@@ -146,7 +146,7 @@ public class payment extends JFrame {
 
 			
 		}});
-		btnNewButton.setBounds(44, 61, 89, 23);
+		btnNewButton.setBounds(44, 61, 136, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Caash On Delivery");
