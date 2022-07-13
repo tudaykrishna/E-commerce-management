@@ -50,8 +50,8 @@ public class Login extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField;
 	private JPasswordField passwordField;
-
-	public static void main(String[] args) {
+	static String s1;
+     public static void main(String[] args) {
 		 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
 		   
@@ -139,7 +139,7 @@ public class Login extends JFrame {
 		JButton btnNewButton_1 = new JButton("Login");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String s1 = textField.getText();
+				s1 = textField.getText();
                 String s2 = passwordField.getText();
                 
         		for(int i=1;i<=noOfRows;i++) {

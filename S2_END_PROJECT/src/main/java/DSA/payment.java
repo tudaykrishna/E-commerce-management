@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Color;
@@ -22,16 +23,17 @@ import com.graphbuilder.struc.Stack;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class payment extends JFrame {
 	static int total =0;
-	private static FileInputStream fis,sif;
+	private static FileInputStream fis,sif,sif1;
     private static FileOutputStream fos;
-    private static Workbook wb,bw;
-    private static Sheet sh,hs;
+    private static Workbook wb,bw,bw1;
+    private static Sheet sh,hs,hs1;
     private static Cell cell;
     private static Row row;
     private CellStyle cellstyle;
@@ -40,11 +42,15 @@ public class payment extends JFrame {
 	private JPanel contentPane;
 	static int bye;
 	static String su;
+	
 
 	/**
 	 * Launch the application.
+	 * @throws IOException 
+	 * @throws EncryptedDocumentException 
 	 */
-	public static void main(String[] args) {	
+	public static void main(String[] args) throws EncryptedDocumentException, IOException {	
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -77,9 +83,14 @@ public class payment extends JFrame {
 		hs=bw.getSheet("Sheet3");
 		final int noOfRows1=hs.getLastRowNum();
 		
+		sif1 = new FileInputStream("./database.xlsx");
+		bw1=WorkbookFactory.create(sif1);
+		hs1=bw1.getSheet("Sheet5");
+		final int noOfRows2=hs1.getLastRowNum();
+		
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 904, 761);
+		setBounds(100, 100, 391, 281);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -125,11 +136,10 @@ public class payment extends JFrame {
 					total = total+ Integer.valueOf(w);
 				}
 				
-				   System.out.println(total);
 				 
         		String eww = String.valueOf(total);
          		JLabel lblNewLabel_2 = new JLabel(eww);
-        		lblNewLabel_2.setBounds(188, 99, 155, 27);
+        		lblNewLabel_2.setBounds(190, 159, 155, 27);
         		contentPane.add(lblNewLabel_2);
         		
         		setState(payment.ICONIFIED);
@@ -137,11 +147,57 @@ public class payment extends JFrame {
 
 			
 		}});
-		btnNewButton.setBounds(724, 296, 89, 23);
+		btnNewButton.setBounds(44, 61, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Pay Later");
-		btnNewButton_1.setBounds(724, 373, 89, 23);
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+					Login a = null;
+					try {
+						a = new Login();
+					} catch (EncryptedDocumentException e2) {
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
+					} catch (IOException e2) {
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
+					}
+
+    			row = hs1.createRow(noOfRows2+1);
+    			cell = row.createCell(0);
+    			cell.setCellValue(a.s1);
+    			cell = row.createCell(1);
+    			cell.setCellValue(total);
+
+    			try {
+    				fos = new FileOutputStream("./database.xlsx");
+    			} catch (FileNotFoundException e1) {
+    				e1.printStackTrace();
+    			}
+    			try {
+    				wb.write(fos);
+    			} catch (IOException e1) {
+    				e1.printStackTrace();
+    			}
+    			try {
+    				fos.flush();
+    			} catch (IOException e1) {
+    				e1.printStackTrace();
+    			}
+    			try {
+    				fos.close();
+    			} catch (IOException e1) {
+    				e1.printStackTrace();
+    			}				
+			}
+		});
+		btnNewButton_1.setBounds(232, 61, 89, 23);
 		contentPane.add(btnNewButton_1);
+		
+		
+		JLabel lblNewLabel = new JLabel("Total Amount:");
+		lblNewLabel.setBounds(96, 165, 84, 14);
+		contentPane.add(lblNewLabel);
 	}
 }

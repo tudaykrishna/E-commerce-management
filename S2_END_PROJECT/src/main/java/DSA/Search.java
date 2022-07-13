@@ -76,7 +76,6 @@ public class Search extends JFrame {
 		fis = new FileInputStream("./database.xlsx");
 		wb=WorkbookFactory.create(fis);
 		sh=wb.getSheet("Sheet2");
-//		bw=WorkbookFactory.create(fis);
 		hs=wb.getSheet("Sheet3");
 		
 		setBounds(100, 100, 476, 334);
@@ -109,10 +108,10 @@ public class Search extends JFrame {
 	
 		JButton btnNewButton_1 = new JButton("Submit");
 		btnNewButton_1.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
 				String r1 = textField.getText();
-				
-				
+					
 				int noOfRows=sh.getLastRowNum();
 				for(int i=1;i<=noOfRows;i++) {
         			Cell q1 = sh.getRow(i).getCell(0);
@@ -145,6 +144,7 @@ public class Search extends JFrame {
             		setState(Search.ICONIFIED);
 					setState(Search.NORMAL);
                 	break; 
+	                 
         			
 				}
 			}

@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 
 import org.apache.poi.EncryptedDocumentException;
@@ -38,6 +39,7 @@ import java.awt.event.ActionEvent;
 
 public class Order extends JFrame {
 	static String a,y,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,b,x,x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
+	
 	
 	class Node
 	{
@@ -146,12 +148,14 @@ public void deleteNode(int position)
 	private JTextField textField_11;
 	private JTextField textField_12;
 	private JTextField textField_13;
+	
 
 	/**
 	 * Launch the application.
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -169,9 +173,11 @@ public void deleteNode(int position)
 	 * @throws IOException 
 	 */
 	public Order() throws IOException {
+
 		fis = new FileInputStream("./database.xlsx");
 		wb=WorkbookFactory.create(fis);
 		sh=wb.getSheet("Sheet3");
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 2160, 1080);
 		contentPane = new JPanel();
@@ -410,10 +416,10 @@ public void deleteNode(int position)
 		JButton btnNewButton = new JButton("Show Cart");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+								
 				textField_12.setText(Display());	
-			}
-		});
+			
+		}});
 		btnNewButton.setBounds(1455, 298, 101, 23);
 		contentPane.add(btnNewButton);
 		
@@ -493,10 +499,10 @@ public void deleteNode(int position)
 				 x8= textField_9.getText();
 				 x9= textField_10.getText();
 				 x10= textField_11.getText();
-				
+				int noOfRows=sh.getLastRowNum();
 				if(chckbxNewCheckBox_1.isSelected()){  
 					  AddNode(a+","+x);
-						int noOfRows=sh.getLastRowNum();
+						
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a);
@@ -506,7 +512,7 @@ public void deleteNode(int position)
 		     
 				if(chckbxNewCheckBox_2.isSelected()){  
 					  AddNode(b+","+y);
-						int noOfRows=sh.getLastRowNum();
+						
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(b);
@@ -515,7 +521,6 @@ public void deleteNode(int position)
 		        }
 				if(chckbxNewCheckBox_1_1.isSelected()){  
 					  AddNode(a1+","+x1);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a1);
@@ -525,7 +530,6 @@ public void deleteNode(int position)
 		        }  
 				if(chckbxNewCheckBox_1_2.isSelected()){  
 					  AddNode(a2+","+x2);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a2);
@@ -535,7 +539,6 @@ public void deleteNode(int position)
 		        }  
 				if(chckbxNewCheckBox_1_3.isSelected()){  
 					  AddNode(a3+","+x3);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a3);
@@ -545,7 +548,6 @@ public void deleteNode(int position)
 		        }  
 				if(chckbxNewCheckBox_1_4.isSelected()){  
 					  AddNode(a4+","+x4);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a4);
@@ -555,7 +557,6 @@ public void deleteNode(int position)
 		        }  
 				if(chckbxNewCheckBox_1_5.isSelected()){  
 					  AddNode(a5+","+x5);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a5);
@@ -565,7 +566,6 @@ public void deleteNode(int position)
 		        }  
 				if(chckbxNewCheckBox_1_6.isSelected()){  
 					  AddNode(a6+","+x6);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a6);
@@ -575,7 +575,6 @@ public void deleteNode(int position)
 		        }  
 				if(chckbxNewCheckBox_1_7.isSelected()){  
 					  AddNode(a7+","+x7);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a7);
@@ -585,7 +584,6 @@ public void deleteNode(int position)
 		        }  
 				if(chckbxNewCheckBox_1_8.isSelected()){  
 					  AddNode(a8+","+x8);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a8);
@@ -595,7 +593,6 @@ public void deleteNode(int position)
 		        }  
 				if(chckbxNewCheckBox_1_9.isSelected()){  
 					  AddNode(a9+","+x9);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a9);
@@ -605,7 +602,6 @@ public void deleteNode(int position)
 		        }  
 				if(chckbxNewCheckBox_1_10.isSelected()){  
 					  AddNode(a10+","+x10);
-						int noOfRows=sh.getLastRowNum();
 		    			row = sh.createRow(noOfRows+1);
 		    			cell = row.createCell(0);
 		    			cell.setCellValue(a10);
